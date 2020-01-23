@@ -12,6 +12,6 @@ resource "github_team" "chef-install" {
 
 resource "github_team_membership" "chef-install-member-Xorima" {
   team_id  = github_team.chef-install.id
-  username    = "Xorima"
+  username = "Xorima"
   role     = "member"
 }
