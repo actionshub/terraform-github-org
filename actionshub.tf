@@ -5,7 +5,7 @@ module "actionshub" {
 }
 
 resource "github_team" "admins" {
-  name        = "admmins"
+  name        = "admins"
   description = "admins of Actionshub"
   privacy     = "closed"
 }
