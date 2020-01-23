@@ -66,7 +66,7 @@ variable "archived" {
 }
 
 locals {
-  default_topics = ["action", "github-action", "ci", "${replace(var.name, "_", "-")}"]
+  default_topics = ["action", "github-action", "ci", "${replace(replace(var.name, "_", "-"), ".", "")}"]
   topics         = concat(local.default_topics, var.additional_topics)
 }
 
