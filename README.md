@@ -18,7 +18,8 @@ Example repository with one maintainer.
 module "terraform-lint" {
   source        = "./modules/repository"
   name          = "terraform-lint"
-  cookbook_team = github_team.terraform-lint.id
+  action_team = github_team.terraform-lint.id
+  action_name = "My Action Name on Marketplace"
 }
 
 resource "github_team" "terraform-lint" {

@@ -1,7 +1,8 @@
 module "danger-rb" {
-  source        = "./modules/repository"
-  name          = "danger-rb"
-  cookbook_team = github_team.danger-rb.id
+  source      = "./modules/repository"
+  name        = "danger-rb"
+  action_team = github_team.danger-rb.id
+  action_name = "actionshub-danger-rb"
 }
 
 resource "github_team" "danger-rb" {

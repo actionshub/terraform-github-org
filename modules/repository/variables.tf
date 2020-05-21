@@ -5,11 +5,16 @@ variable "description" {
 }
 
 locals {
-  default_description = "Repository for the ${var.name} action"
+  default_description = "Repository for the ${var.action_name} Github Action"
   description         = var.description == "" ? local.default_description : var.description
 }
 
-variable "cookbook_team" {
+variable "action_name" {
+  default     = ""
+  description = "The name of the published action"
+}
+
+variable "action_team" {
   description = "ID of the team that should own the repo, gives push access"
 }
 
@@ -27,7 +32,7 @@ variable "require_ci_pass" {
 }
 
 variable "status_checks" {
-  type    = list
+  type    = list(string)
   default = ["final"]
 }
 
@@ -48,7 +53,7 @@ variable "everyone_permission" {
 }
 
 locals {
-  default_homepage_url = "https://github.com/marketplace/actions/${var.name}"
+  default_homepage_url = "https://github.com/marketplace/actions/${var.action_name}"
   homepage_url         = var.homepage_url == "" ? local.default_homepage_url : var.homepage_url
 }
 
@@ -66,13 +71,13 @@ variable "archived" {
 }
 
 locals {
-  default_topics = ["action", "github-action", "ci", "${replace(replace(var.name, "_", "-"), ".", "")}"]
+  default_topics = ["${replace(replace(var.name, "_", "-"), ".", "")}", "terraform-managed"]
   topics         = concat(local.default_topics, var.additional_topics)
 }
 
 variable "additional_topics" {
-  type    = list
-  default = []
+  type    = list(string)
+  default = ["ci", "action", "github-action"]
 }
 
 variable "auto_init" {

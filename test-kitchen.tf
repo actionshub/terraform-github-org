@@ -1,7 +1,8 @@
 module "test-kitchen" {
-  source        = "./modules/repository"
-  name          = "test-kitchen"
-  cookbook_team = github_team.test-kitchen.id
+  source      = "./modules/repository"
+  name        = "test-kitchen"
+  action_team = github_team.test-kitchen.id
+  action_name = "actionshub-test-kitchen"
 }
 
 resource "github_team" "test-kitchen" {

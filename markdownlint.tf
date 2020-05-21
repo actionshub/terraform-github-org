@@ -1,7 +1,8 @@
 module "markdownlint" {
-  source        = "./modules/repository"
-  name          = "markdownlint"
-  cookbook_team = github_team.markdownlint.id
+  source      = "./modules/repository"
+  name        = "markdownlint"
+  action_team = github_team.markdownlint.id
+  action_name = "markdownlint-mdl-action"
 }
 
 resource "github_team" "markdownlint" {

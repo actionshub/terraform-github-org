@@ -1,7 +1,8 @@
 module "rake" {
-  source        = "./modules/repository"
-  name          = "rake"
-  cookbook_team = github_team.rake.id
+  source      = "./modules/repository"
+  name        = "rake"
+  action_team = github_team.rake.id
+  action_name = "actionshub-rake"
 }
 
 resource "github_team" "rake" {

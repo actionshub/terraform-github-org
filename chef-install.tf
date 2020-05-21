@@ -1,7 +1,9 @@
 module "chef-install" {
-  source        = "./modules/repository"
-  name          = "chef-install"
-  cookbook_team = github_team.chef-install.id
+  source      = "./modules/repository"
+  name        = "chef-install"
+  action_team = github_team.chef-install.id
+  action_name = "actionshub-chef-install"
+
 }
 
 resource "github_team" "chef-install" {
