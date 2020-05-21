@@ -1,7 +1,8 @@
 module "terraform-lint" {
-  source        = "./modules/repository"
-  name          = "terraform-lint"
-  cookbook_team = github_team.terraform-lint.id
+  source      = "./modules/repository"
+  name        = "terraform-lint"
+  action_team = github_team.terraform-lint.id
+  action_name = "terraform-lint"
 }
 
 resource "github_team" "terraform-lint" {

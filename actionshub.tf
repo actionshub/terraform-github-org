@@ -1,7 +1,8 @@
 module "actionshub" {
-  source        = "./modules/repository"
-  name          = "actionshub"
-  cookbook_team = github_team.admins.id
+  source      = "./modules/repository"
+  name        = "actionshub"
+  action_team = github_team.admins.id
+  description = "Repository to hold org wide issues and thoughts"
 }
 
 resource "github_team" "admins" {

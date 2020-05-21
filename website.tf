@@ -1,7 +1,7 @@
 module "website" {
   source            = "./modules/repository"
   name              = "website"
-  cookbook_team     = github_team.website.id
+  action_team       = github_team.website.id
   homepage_url      = "https://www.actionshub.org"
   description       = "Code to run our website"
   additional_topics = ["website"]

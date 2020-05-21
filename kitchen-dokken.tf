@@ -1,7 +1,8 @@
 module "kitchen-dokken" {
-  source        = "./modules/repository"
-  name          = "kitchen-dokken"
-  cookbook_team = github_team.kitchen-dokken.id
+  source      = "./modules/repository"
+  name        = "kitchen-dokken"
+  action_team = github_team.kitchen-dokken.id
+  action_name = "actionshub-test-kitchen"
 }
 
 resource "github_team" "kitchen-dokken" {

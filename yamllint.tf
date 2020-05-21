@@ -1,7 +1,8 @@
 module "yamllint" {
-  source        = "./modules/repository"
-  name          = "yamllint"
-  cookbook_team = github_team.yamllint.id
+  source      = "./modules/repository"
+  name        = "yamllint"
+  action_team = github_team.yamllint.id
+  action_name = "yaml-lint-action"
 }
 
 resource "github_team" "yamllint" {
