@@ -12,7 +12,7 @@ Add yourself to `modules/org_membership/main.tf`
 
 Create a file called `repository.tf` where repository is the name of your repository e.g. `terraform-lint.tf`
 
-Example repository with one maintainer.
+Example repository with including maintainers.
 
 ```hcl
 module "terraform-lint" {
