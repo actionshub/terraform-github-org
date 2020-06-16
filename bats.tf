@@ -20,5 +20,5 @@ resource "github_team_membership" "bats-member-rshade" {
 resource "github_team_membership" "bats-member-Xorima" {
   team_id  = github_team.bats.id
   username = "Xorima"
-  role     = "member"
+  role     = "maintainer"
 }

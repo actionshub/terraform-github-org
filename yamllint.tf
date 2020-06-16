@@ -14,5 +14,5 @@ resource "github_team" "yamllint" {
 resource "github_team_membership" "yamllint-member-Xorima" {
   team_id  = github_team.yamllint.id
   username = "Xorima"
-  role     = "member"
+  role     = "maintainer"
 }

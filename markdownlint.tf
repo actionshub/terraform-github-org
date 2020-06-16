@@ -14,5 +14,5 @@ resource "github_team" "markdownlint" {
 resource "github_team_membership" "markdownlint-member-Xorima" {
   team_id  = github_team.markdownlint.id
   username = "Xorima"
-  role     = "member"
+  role     = "maintainer"
 }
