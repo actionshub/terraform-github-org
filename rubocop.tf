@@ -14,5 +14,5 @@ resource "github_team" "rubocop" {
 resource "github_team_membership" "rubocop-member-Xorima" {
   team_id  = github_team.rubocop.id
   username = "Xorima"
-  role     = "member"
+  role     = "maintainer"
 }

@@ -14,5 +14,5 @@ resource "github_team" "rake" {
 resource "github_team_membership" "rake-member-Xorima" {
   team_id  = github_team.rake.id
   username = "Xorima"
-  role     = "member"
+  role     = "maintainer"
 }

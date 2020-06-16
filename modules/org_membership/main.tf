@@ -8,6 +8,11 @@ resource "github_membership" "tas50" {
   role     = "admin"
 }
 
+resource "github_membership" "xorimabot" {
+  username = "xorimabot"
+  role     = "admin"
+}
+
 resource "github_membership" "rshade" {
   username = "rshade"
   role     = "member"

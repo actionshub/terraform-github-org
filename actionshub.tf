@@ -14,5 +14,5 @@ resource "github_team" "admins" {
 resource "github_team_membership" "admins-member-Xorima" {
   team_id  = github_team.admins.id
   username = "Xorima"
-  role     = "member"
+  role     = "maintainer"
 }
