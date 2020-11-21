@@ -97,3 +97,28 @@ variable "auto_init" {
   this to true which should enable branch protections.
 DESCRIPTION
 }
+
+
+variable "label_validator_config" {
+  default = {
+    enabled = false
+  }
+}
+
+variable "release_creator_config" {
+  default = {
+    enabled = false
+  }
+}
+
+variable "changelog_reset_config" {
+  default = {
+    enabled = false
+  }
+}
+
+variable "changelog_validator_config" {
+  default = {
+    enabled = false
+  }
+}
