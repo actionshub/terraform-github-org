@@ -1,8 +1,8 @@
 module "bats" {
-  source      = "./modules/repository"
-  name        = "bats"
-  action_team = github_team.bats.id
-  action_name = "actionshub-bats"
+  source                     = "./modules/repository"
+  name                       = "bats"
+  action_team                = github_team.bats.id
+  action_name                = "actionshub-bats"
   label_validator_config     = local.label_validator_config
   release_creator_config     = local.release_creator_config
   changelog_reset_config     = local.changelog_reset_config

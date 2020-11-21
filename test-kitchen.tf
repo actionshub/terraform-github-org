@@ -1,8 +1,8 @@
 module "test-kitchen" {
-  source      = "./modules/repository"
-  name        = "test-kitchen"
-  action_team = github_team.test-kitchen.id
-  action_name = "actionshub-test-kitchen"
+  source                     = "./modules/repository"
+  name                       = "test-kitchen"
+  action_team                = github_team.test-kitchen.id
+  action_name                = "actionshub-test-kitchen"
   label_validator_config     = local.label_validator_config
   release_creator_config     = local.release_creator_config
   changelog_reset_config     = local.changelog_reset_config
